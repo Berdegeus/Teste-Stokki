@@ -1,0 +1,33 @@
+a {
+  text-decoration: none;
+}
+
+.card {
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  margin: 10px;
+  transition: transform 0.3s;
+  height: 70vh; 
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box; 
+  border: 4px solid #37235D;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.card-title {
+  color: #37235D;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}

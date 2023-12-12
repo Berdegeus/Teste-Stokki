@@ -1,0 +1,104 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model notas_fiscais {
+  id                  Int       @id @default(autoincrement())
+  id_nota_fiscal      String?   @db.VarChar(255)
+  serie               String?   @db.VarChar(255)
+  numero              String?   @db.VarChar(255)
+  loja                String?   @db.VarChar(255)
+  numeropedidoloja    String?   @db.VarChar(255)
+  tipo                String?   @db.Char(1)
+  situacao            String?   @db.VarChar(255)
+  contato             String?   @db.VarChar(255)
+  cnpj                String?   @db.VarChar(255)
+  vendedor            String?   @db.VarChar(255)
+  datasaidaentrada    DateTime? @db.Timestamp(6)
+  dataemissao         DateTime? @db.Timestamp(6)
+  valornota           Decimal?  @db.Decimal(10, 2)
+  chaveacesso         String?   @db.VarChar(255)
+  xml                 String?
+  linkdanfe           String?
+  linkpdf             String?
+  codigosrastreamento Json?
+  cfops               Json?
+  unidadenegocio      String?   @db.VarChar(255)
+  cliente             Json?
+  transporte          Json?
+}
+
+model pedidos {
+  id                Int       @id @default(autoincrement())
+  desconto          String?   @db.VarChar(255)
+  observacoes       String?
+  observacaointerna String?
+  data              DateTime? @db.Date
+  numero            String?   @db.VarChar(255)
+  numeroordemcompra String?   @db.VarChar(255)
+  vendedor          String?   @db.VarChar(255)
+  valorfrete        Decimal?  @db.Decimal(10, 2)
+  outrasdespesas    Decimal?  @db.Decimal(10, 2)
+  totalprodutos     Decimal?  @db.Decimal(10, 2)
+  totalvenda        Decimal?  @db.Decimal(10, 2)
+  situacao          String?   @db.VarChar(255)
+  datasaida         DateTime? @db.Date
+  loja              String?   @db.VarChar(255)
+  numeropedidoloja  String?   @db.VarChar(255)
+  tipointegracao    String?   @db.VarChar(255)
+  cliente           Json?
+  transporte        Json?
+  itens             Json?
+  parcelas          Json?
+}
+
+model produtos {
+  id                        BigInt    @id
+  codigo                    String?   @db.VarChar(255)
+  descricao                 String?
+  tipo                      String?   @db.Char(1)
+  situacao                  String?   @db.VarChar(255)
+  unidade                   String?   @db.VarChar(255)
+  preco                     Decimal?  @db.Decimal(10, 2)
+  preco_custo               Decimal?  @db.Decimal(10, 2)
+  descricao_curta           String?
+  descricao_complementar    String?
+  data_inclusao             DateTime? @db.Date
+  data_alteracao            DateTime? @db.Date
+  marca                     String?   @db.VarChar(255)
+  class_fiscal              String?   @db.VarChar(255)
+  cest                      String?   @db.VarChar(255)
+  origem                    String?   @db.Char(1)
+  id_grupo_produto          BigInt?
+  observacoes               String?
+  garantia                  Int?
+  peso_liq                  Decimal?  @db.Decimal
+  peso_bruto                Decimal?  @db.Decimal
+  estoque_minimo            Decimal?  @db.Decimal
+  estoque_maximo            Decimal?  @db.Decimal
+  gtin                      String?   @db.VarChar(255)
+  gtin_embalagem            String?   @db.VarChar(255)
+  largura_produto           Decimal?  @db.Decimal
+  altura_produto            Decimal?  @db.Decimal
+  profundidade_produto      Decimal?  @db.Decimal
+  unidade_medida            String?   @db.VarChar(255)
+  itens_por_caixa           Int?
+  volumes                   Int?
+  localizacao               String?   @db.VarChar(255)
+  crossdocking              Int?
+  condicao                  String?   @db.VarChar(255)
+  frete_gratis              String?   @db.Char(1)
+  producao                  String?   @db.Char(1)
+  data_validade             DateTime? @db.Date
+  sped_tipo_item            String?   @db.VarChar(255)
+  categoria_id              BigInt?
+  categoria_descricao       String?   @db.VarChar(255)
+  imagem_link               String?   @db.VarChar(255)
+  imagem_validade           DateTime? @db.Date
+  imagem_tipo_armazenamento String?   @db.VarChar(255)
+}

@@ -1,0 +1,46 @@
+.nota-detalhes {
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.nota-detalhes h1 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.nota-detalhes p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.nota-detalhes p strong {
+  color: #333;
+}
+
+.nota-not-found {
+  color: red;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.nota-section {
+  border: 1px solid #37235D;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.item {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0.5px solid #37235D;
+}
+
+.nota-parcelas {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0.5px solid #37235D;
+}

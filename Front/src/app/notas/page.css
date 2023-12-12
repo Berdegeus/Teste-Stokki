@@ -1,0 +1,22 @@
+.notas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.nota-titulo {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  color: #37235D;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  border: 1px solid #37235D;
+  border-radius: 5px;
+}
+
+.notas-container {
+  width: 80%;
+  max-width: 1200px;
+}

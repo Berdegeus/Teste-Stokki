@@ -1,0 +1,33 @@
+.produto-detalhes {
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.produto-detalhes h1 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.produto-detalhes p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.produto-detalhes p strong {
+  color: #333;
+}
+
+.produto-not-found {
+  color: red;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.produto-section {
+  border: 1px solid #37235D;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+}
+

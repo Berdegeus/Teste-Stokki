@@ -1,0 +1,17 @@
+.produto-row {
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.produto-row:hover {
+  background-color: #ececec;
+}
+
+.produto-row-link {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+.produto-row-link:hover {
+  text-decoration: underline;
+}
